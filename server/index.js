@@ -18,7 +18,7 @@ try {
 }
 
 app.use('/products', require('./routes/productsRoutes'));
-// app.use('/users', require('./routes/usersRoutes'));
+app.use('/users', require('./routes/usersRoutes'));
 
 
 connecting().then(()=>{

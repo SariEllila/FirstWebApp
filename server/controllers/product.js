@@ -53,7 +53,7 @@ const update = async (req, res) => {
     let {old_product, new_product} = req.body;
     try{
         const updated = await Products.findOneAndUpdate(
-            { name: old_product },{ name: new_product } 
+            { name: old_product }, new_product
         );
 
         if(updated){
