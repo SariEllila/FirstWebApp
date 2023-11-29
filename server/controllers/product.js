@@ -35,7 +35,7 @@ const del = async (req, res) => {
     let { product, size, color } = req.body;
     try{
         const removed = await Products.deleteOne({name: product, size: size, color: color});
-
+console.log(removed);
         if (removed){
             res.send(`${product} was deleted successfully`)
             }

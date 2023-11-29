@@ -39,7 +39,7 @@ const del = async (req, res) => {
         if (removed){
             res.send(`${username} was deleted successfully`)
             }
-        else {
+        else if (!username) {
             res.send(`${username} was not found or not deleted successfully`)
         }
     }
