@@ -1,30 +1,11 @@
 import React from 'react'
-
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const Home = () => {
     return (
 
 <div>
-
-<header>
-
-<nav class="navbar">
-
-    <div id="homelogo">
-    <h1>HOME</h1>
-    </div>
-
-    <div class="nav_items">
-    <h2 class="nav_item_mission">Mission</h2>
-    <h2 class="nav_item_store">Online Store</h2>
-    <h2 class="nav_item_cart">Cart</h2>
-    <h2 class="nav_item_account">User Account</h2>
-    </div>
-
-</nav>
-
-</header>
-    
 
 <main>
 
@@ -35,8 +16,13 @@ GIFT-GIVING TO LOVED ONES</h1>
 <h2>See Our Products Below</h2>
 </div>
 
-</main>
+<div class="homeCollectionImg">
+    <img class="homeImgs" src="./images/Amazon.jpg"/>
+    <img class="homeImgs" src="./images/Ocean.jpg"/>
+    <img class="homeImgs" src="./images/Wildlife.jpeg"/>
+</div>
 
+</main>
 
 </div>
 

@@ -1,9 +1,9 @@
 const express = require('express'),
     app = express(),
     mongoose = require('mongoose')
-
+    var cors = require('cors')
 mongoose.set('debug',true)
-
+app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
