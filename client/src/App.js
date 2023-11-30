@@ -1,12 +1,14 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/Mission";
+import Home from "./views/Home";
+import Store from "./views/Store";
+import Mission from "./views/Mission";
+import Cart from "./views/Cart";
 
-import "./styles.css";
 
-export default function App() {
+function App() {
+
   return (
     <div className="App">
       <Router>
@@ -15,14 +17,13 @@ export default function App() {
           <Route path="/mission" element={<Mission />} />
         </Routes>
       </Router>
-    </div>
-  );
-}
 
-function App() {
-  return (
-    <div className="App">
+
 
     </div>
+
   );
+  
 }
+
+export default App;
