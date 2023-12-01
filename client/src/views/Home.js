@@ -1,6 +1,5 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -17,9 +16,9 @@ GIFT-GIVING TO LOVED ONES</h1>
 </div>
 
 <div class="homeCollectionImg">
-    <img class="homeImgs" src="./images/Amazon.jpg"/>
-    <img class="homeImgs" src="./images/Ocean.jpg"/>
-    <img class="homeImgs" src="./images/Wildlife.jpeg"/>
+    <Link to="/store"><img class="homeImgs" src="./images/Amazon.jpg"/></Link>
+    <Link to="/store"><img class="homeImgs" src="./images/Ocean.jpg"/></Link>
+    <Link to="/store"><img class="homeImgs" src="./images/Wildlife.jpeg"/></Link>
 </div>
 
 </main>
