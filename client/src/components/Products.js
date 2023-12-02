@@ -20,6 +20,10 @@ fetchProducts()
 },[])
 
 
+
+
+
+
 const [counter, setCounter] = useState(0);
 
   return (
@@ -38,3 +42,38 @@ const [counter, setCounter] = useState(0);
 }
 
 export default Products;
+
+
+
+
+
+// const fetchProducts = async () => {
+
+//   const {products, setProducts} = useState([])
+
+//   try {
+//     let res = await axios.get(``)
+// if(res.data) {
+// setTemp((res.data.main.temp - 273).toFixed(1))
+// } else {
+//   setMsg('No weather available in this location')
+// }
+// setTimeout(()=>{
+//   setLoading(false)
+// },2000)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+
+// useEffect(()=>{
+
+//   if(coords.lat && coords.lon) {
+//     fetchWeather()
+//   }
+// },[coords])
+
+// useEffect(()=>{
+// fetchCoords()
+// },[])

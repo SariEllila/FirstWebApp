@@ -1,28 +1,39 @@
 
-
-.App {
-  text-align: center;
+* {
   margin: 0 auto;
   padding: 0 auto;
 }
 
+.App {
+  text-align: center;
+  font-family: 'Jost';
+}
+
+
 /* HEADER */
 
 header {
-  background-color: rgb(215, 215, 215);
+  background-color: #A6C48A;
 }
 
-#homelogo {
-  margin-right: 70%;
+.homelogo {
+  margin-right: 43%;
+  font-size: 140%;
+  text-shadow: 0vw 0vw 7vw rgb(81, 81, 81);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .navbar {
-  color: rgb(71, 70, 70);
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-top: 1%;
+  padding: 2% 3%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(251, 243, 243);
 }
 
 .nav_items {
@@ -32,35 +43,74 @@ header {
 }
 
 .nav_item_mission {
-  margin-right: 5%;
+  padding: 0 20%;
+  font-weight: 400;
 }
 
 .nav_item_store {
-  margin-right: 5%
+  padding: 0 20%;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 10px 10px 70px rgb(59, 59, 59);
+  margin-right: 10%;
 }
 
-.nav_item_cart {
-  margin-right: 5%
+.cart_icon {
+  width: 3vw;
 }
 
 .nav_item_account {
-  margin-right: 5%
+  padding: 0 20%;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 10px 10px 70px rgb(59, 59, 59);
 }
 
 /* HEADER CLOSE */
 
 /* HOME */
 
+.homeMain {
+  background-image: url('./views/images/Wildlife-2.jpeg');
+  background-size: cover;
+}
+
 #home_intro_text {
-  font-size: 120%;
-  background: grey;
-  padding: 3% 20%
+  font-size: 170%;
+  font-weight: 400;
+  color:  rgb(251, 243, 243);
+  padding: 5% 20%;
+}
+
+.homelogo {
+  font-size: 170%;
+  margin-left: 60%;
 }
 
 .homeImgs {
   width: 30%;
   height: 40%;
   padding: 0.5% 1%;
+  opacity: 70%;
+}
+
+.homeCollectionImg {
+  background-color: rgb(251, 243, 243);
+  padding: 5% 0;
+}
+
+.homeImgs:hover {
+  opacity: 50%;
+  width: 30.2%;
+  height: 40.2%;
+}
+
+.font2 {
+  font-family: Abel;
+  padding: 2% 0;
+  width: 60%;
 }
 
 /* HOME CLOSE */
@@ -92,33 +142,36 @@ header {
 
 /* MISSION CLOSE */
 
+/* LOGIN */
+
+
+/* LOGIN CLOSE */
+
 
 /* FOOTER */
 
-.social_media_links {
-  display: flex;
-  justify-content: center;
-  margin-top: 0%;
+footer {
+  background: #A6C48A;
+  padding: 3% 0;
+  color: white;
+}
+
+.rights_reserved_text {
+  margin-bottom: 2%;
+  font-family: 'Jost';
+  font-weight: 500;
+  font-size: 120%;
 }
 
 .fb_logo {
-  margin-right: 0.5%;
+  width: 3%;
+  margin-right: 1%;
 }
 
 .insta_logo {
-  margin-left: 0.5%;
-  margin-right: 0.5%;
+  width: 3%;
+  margin-left: 1%;
 }
-
-.twitter_logo {
-  margin-left: 0.5%;
-}
-
-footer {
-  background: lightgrey;
-  padding: 0.5% 0;
-}
-
 
 /* FOOTER CLOSE */
 

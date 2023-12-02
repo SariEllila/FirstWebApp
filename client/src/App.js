@@ -10,6 +10,9 @@ import EditUser from "./views/EditUser";
 import Register from './views/Register';
 import LogIn from './views/LogIn';
 import SingleProduct from './views/SingleProduct';
+import AmazonCollection from './views/AmazonCollection';
+import OceanCollection from './views/OceanCollection';
+import WildlifeCollection from './views/WildlifeCollection';
 import Header from './components/Header';
 import Footer from './components/Footer';
 // import * as jose from "jose";
@@ -70,7 +73,9 @@ function App() {
           <Route path="/edituser" element={<EditUser />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/product" element={<SingleProduct />} />
-
+          <Route path="/amazon" element={<AmazonCollection />} />
+          <Route path="/ocean" element={<OceanCollection />} />
+          <Route path="/wildlife" element={<WildlifeCollection />} />
         </Routes>
         <Footer/>
       </Router>

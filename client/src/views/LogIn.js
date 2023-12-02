@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const LogIn = () => {
 
@@ -10,7 +10,7 @@ const LogIn = () => {
 
         <div>
 
-<form>
+<form class="loginForm">
 <h3>Username</h3>
         <input type="text"></input>
 <h3>Password</h3>

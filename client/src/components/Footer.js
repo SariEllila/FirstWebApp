@@ -5,12 +5,11 @@ const Footer = () => {
 
 <footer>
 
-    <h4>All Rights Reserved</h4>
+    <h4 class="rights_reserved_text">© All Rights Reserved</h4>
 
     <div class="social_media_links">
-    <h5 class="twitter_logo">FB</h5>
-    <h5 class="insta_logo">Insta</h5>
-    <h5 class="twitter_logo">Twitter</h5>
+    <a href="https://www.facebook.com" target="_blank"><img src="./logos/fb_png.png" class="fb_logo"/></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="./logos/insta_logo.png" class="insta_logo"/></a>
     </div>
 
 </footer>
