@@ -6,16 +6,18 @@ const Store = () => {
 
 <div>
 
-        <div class='product_filter'>
-        <h3>Filter</h3>
-        </div>
+        <div class='store_header'>
 
-        <div>
+        <button>Filter ▽</button>
+    <div>
         <h3>CART</h3>
+        <h3>0</h3>
+    </div>
 
         </div>
 
-        <div>
+        <div class="all_products">
+        <h1>PRODUCTS</h1>
         <Products />
         </div>
 

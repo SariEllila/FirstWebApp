@@ -2,6 +2,7 @@ import './App.css';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { useHistory } from 'react-router-dom';
 import Home from "./views/Home";
 import Store from "./views/Store";
 import Mission from "./views/Mission";
@@ -13,10 +14,10 @@ import SingleProduct from './views/SingleProduct';
 import AmazonCollection from './views/AmazonCollection';
 import OceanCollection from './views/OceanCollection';
 import WildlifeCollection from './views/WildlifeCollection';
+import UserInfo from './views/UserInfo';
 import Header from './components/Header';
 import Footer from './components/Footer';
 // import * as jose from "jose";
-
 
 function App() {
 
@@ -67,7 +68,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/store" element={<Store />} />
-          {/* <Route path="/account" element={<LogIn />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/edituser" element={<EditUser />} />
@@ -76,6 +76,7 @@ function App() {
           <Route path="/amazon" element={<AmazonCollection />} />
           <Route path="/ocean" element={<OceanCollection />} />
           <Route path="/wildlife" element={<WildlifeCollection />} />
+          <Route path="/user" element={<UserInfo />} />
         </Routes>
         <Footer/>
       </Router>

@@ -7,13 +7,14 @@ const OceanCollection = () => {
     return (
         
 <div>
+
 <h1>Ocean Collection</h1>
 
-<button>Amazon Collection</button>
+<Link to="/amazon"><button>Amazon Collection</button></Link>
 
-<button>Wildlife Collection</button>
+<Link to="/wildlife"><button>Wildlife Collection</button></Link>
 
-<Link to="./views/Store"><button>All products</button></Link>
+<Link to="/store"><button>All products</button></Link>
 
 </div>
 

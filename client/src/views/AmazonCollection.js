@@ -10,10 +10,10 @@ const AmazonCollection = () => {
 <div>
 <h1>Amazon Collection</h1>
 
-<Link to="./views/OceanCollection"><button>Ocean Collection</button></Link>
-<Link to="./views/WildlifeCollection"><button>Wildlife Collection</button></Link>
+<Link to="/ocean"><button>Ocean Collection</button></Link>
+<Link to="/wildlife"><button>Wildlife Collection</button></Link>
 
-<button>All products</button>
+<Link to="/store"><button>All products</button></Link>
 
 </div>
 

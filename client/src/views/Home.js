@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
 
-<div>
-
 <main class="homeMain">
 
 <div id="home_intro_text" >
@@ -15,15 +13,12 @@ const Home = () => {
 </div>
 
 <div class="homeCollectionImg">
-    <Link to="/amazon"><img class="homeImgs" src="./images/Amazon.jpg"/></Link>
-    <Link to="/ocean"><img class="homeImgs" src="./images/Ocean.jpg"/></Link>
-    <Link to="/wildlife"><img class="homeImgs" src="./images/Wildlife.jpeg"/></Link>
+    <Link to="/amazon"><img class="homeImgs" src="./images/Amazon.jpg" alt="a drone image of amazon rainforest and the Amazon river running in the middle on a cloudy day"/></Link>
+    <Link to="/ocean"><img class="homeImgs" src="./images/Ocean.jpg" alt="a birdseye view of turquoise blue ocean and a large wave crashing in the middle"/></Link>
+    <Link to="/wildlife"><img class="homeImgs" src="./images/Wildlife.jpeg" alt="an birdseye view of a turquoise sea and an empty beach with rainforest"/></Link>
 </div>
 
 </main>
-
-</div>
-
 
     )
 

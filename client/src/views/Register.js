@@ -3,11 +3,11 @@ import React from 'react'
 const Register = () => {
     return (
 
-<div>
+<div class="reg_form">
     
 <h1>Register User</h1>
 
-<form class='register'>
+<form class='register_inputs'>
 
 <div class="userInfo">
 <h3>Username</h3>
@@ -26,6 +26,8 @@ const Register = () => {
 <input type="number"></input>
 </div>
 
+<h2>Billing Information</h2>
+
 <div class="billingInfo">
 <h3>Address</h3>
 <input type="text"></input>
@@ -41,7 +43,7 @@ const Register = () => {
 <input type="number"></input>
 </div>
 
-<button>SUBMIT</button>
+<button class="reg_submit_button">SUBMIT</button>
 
 </form>
 

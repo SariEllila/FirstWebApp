@@ -1,7 +1,7 @@
 const Users = require('../models/users');
 const User = require("../models/users.models");
 const argon2 = require("argon2");
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
 const validator = require("validator");
 const jwt_secret = process.env.JWT_SECRET;
 
