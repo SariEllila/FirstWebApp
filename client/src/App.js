@@ -72,7 +72,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/edituser" element={<EditUser />} />
           <Route path="/login" element={<LogIn />} />
-          <Route path="/product" element={<SingleProduct />} />
+          <Route path="/product/productId" element={<SingleProduct />} />
           <Route path="/amazon" element={<AmazonCollection />} />
           <Route path="/ocean" element={<OceanCollection />} />
           <Route path="/wildlife" element={<WildlifeCollection />} />
