@@ -11,10 +11,8 @@ import EditUser from "./views/EditUser";
 import Register from './views/Register';
 import LogIn from './views/LogIn';
 import SingleProduct from './views/SingleProduct';
-import AmazonCollection from './views/AmazonCollection';
-import OceanCollection from './views/OceanCollection';
-import WildlifeCollection from './views/WildlifeCollection';
 import UserInfo from './views/UserInfo';
+import OrderSheet from './views/OrderSheet';
 import Header from './components/Header';
 import Footer from './components/Footer';
 // import * as jose from "jose";
@@ -23,18 +21,74 @@ function App() {
 
   const [products, setProducts] = useState([])
   const [cartItems, setCartItems] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [token, setToken] = useState(JSON.parse(localStorage.getItem("token")));
 
+
   const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+// check if product exists in cart already
+let prodIdx = cartItems.findIndex(item=>item._id === product._id)
+if(prodIdx !== -1){
+// if product is in cart we want to change only it's quantity
+let copy = [...cartItems]
+copy[prodIdx].quantity ++
+setCartItems(copy)
+
+} else {
+// if product is not in cart, we create new product object with quantity
+let prod ={
+  ...product,
+  quantity:1
+}
+setCartItems([...cartItems, prod]);
+
+}
+
+addToPrice(product);
   };
 
+
+useEffect(()=>{
+console.log(cartItems);
+},[cartItems])
+
+
   const removeFromCart = (productId) => {
+
     const updatedCart = cartItems.filter((item) => item._id !== productId);
     setCartItems(updatedCart);
+
+    removeFromPrice();
+    removeFromQuantity();
+  };
+
+
+  const addToPrice = (product) => {
+
+    setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * product.quantity);
+
+  };
+
+  const removeFromPrice = (product) => {
+
+    setTotalPrice((prevTotalPrice) => prevTotalPrice - product.price * product.quantity);
+
+  };
+
+  // const addToQuantity = (product) => {
+
+  //   setTotalQuantity((prevTotalQuantity) => prevTotalQuantity + 1 );
+
+  // };
+
+  const removeFromQuantity = (product) => {
+
+    setTotalQuantity((prevTotalQuantity) => prevTotalQuantity - 1 );
+
   };
 
 
@@ -86,10 +140,8 @@ function App() {
           <Route path="/edituser" element={<EditUser />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/product/:productId" element={<SingleProduct products={products} addToCart={addToCart} removeFromCart={removeFromCart} />} />
-          <Route path="/amazon" element={<AmazonCollection />} />
-          <Route path="/ocean" element={<OceanCollection />} />
-          <Route path="/wildlife" element={<WildlifeCollection />} />
           <Route path="/user" element={<UserInfo />} />
+          <Route path="/order" element={<OrderSheet />} />
         </Routes>
         <Footer/>
       </Router>

@@ -9,7 +9,9 @@ const fetchProducts = async () => {
     try {
         let res = await axios.get('http://localhost:4040/products')
 if(res.status === 200) {  // You check whatever is suitable for you - you structure responses in the backend ;) 
-setProducts(res.data)  // check the res structure to be sure you set an array of products to state
+setProducts(res.data)
+
+  // check the res structure to be sure you set an array of products to state
 }
     } catch (error) {
         console.log(error);
