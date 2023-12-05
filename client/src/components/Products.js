@@ -3,9 +3,7 @@ import axios from 'axios'
 import { Link } from "react-router-dom";
 
 
-function Products() {
-
-const [products, setProducts] = useState([])
+function Products({products, setProducts}) {
 
 const fetchProducts = async () => {
     try {
@@ -23,26 +21,24 @@ useEffect(()=>{
 fetchProducts()
 },[])
 
-const [singleProduct, setSingleProduct] = useState({})
-
 
 return (
-    <div>{products && products.length > 0 ? products.map(e=>( 
+    <div>{products && products.length > 0 ? products.map(prod=>( 
 
-<div key={product.id}>
-<Link to={`/product/${product.id}`}></Link>
-<h3>{e.name}</h3> 
-<img src="{e.image}" alt="a black t-shirt with green sleeves and an image of the amazon with text: SOS Amazon"/>
-<h3>{e.size}</h3>    
-<h3>{e.price}€</h3>
-<h3>'{e.description}'</h3>
+<div key={prod.id}>
+<h3>{prod.name}</h3> 
+<Link to={`/product/${prod._id}`}>
+<img src={prod.image} alt="a black t-shirt with green sleeves and an image of the amazon with text: SOS Amazon"/>
+</Link>
+
+<h3>{prod.size}</h3>    
+<h3>{prod.price}€</h3>
+<h3>'{prod.description}'</h3>
 </div>                                             
 )) : <h3>no products</h3>  }</div>
   )
 
 }
-
-
 
 export default Products;
 
@@ -67,10 +63,6 @@ export default Products;
 // }
 
 
-
-
-// const fetchProducts = async () => {
-
 //   const {products, setProducts} = useState([])
 
 //   try {
@@ -89,13 +81,3 @@ export default Products;
 // }
 
 
-// useEffect(()=>{
-
-//   if(coords.lat && coords.lon) {
-//     fetchWeather()
-//   }
-// },[coords])
-
-// useEffect(()=>{
-// fetchCoords()
-// },[])

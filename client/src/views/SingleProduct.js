@@ -1,28 +1,12 @@
-import React from 'react';
 import Products from '../components/Products';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function SingleProduct() {
+function SingleProduct({addToCart, removeFromCart, products}) {
 
   const { productId } = useParams();
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const res = await axios.get(`http://localhost:4040/products/${productId}`);
-        if (res.status === 200) {
-          setProduct(res.data);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchProduct();
-  }, [productId]);
+  const [product, setProduct] = useState(products[products.findIndex(prod=>prod._id == productId)]);
 
   if (!product) {
     return <h3>Loading...</h3>;
@@ -35,6 +19,9 @@ function SingleProduct() {
       <h3>{product.size}</h3>
       <h3>{product.price}€</h3>
       <h3>{product.description}</h3>
+      <h3>{product.material}</h3>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <button onClick={removeFromCart(product._id)}>Remove from Cart</button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Products from '../components/Products';
 
-const Store = () => {
+const Store = ({products,setProducts}) => {
     return (
 
 <div>
@@ -18,7 +18,7 @@ const Store = () => {
 
         <div class="all_products">
         <h1>PRODUCTS</h1>
-        <Products />
+        <Products products={products} setProducts={setProducts} />
         </div>
 
 </div>
