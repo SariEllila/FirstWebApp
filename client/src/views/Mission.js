@@ -15,7 +15,8 @@ const Mission = () => {
 </div>
 
 <div class="mission_amazon_charities">
-    <h1>AMAZON CHARITIES</h1>
+<img src="./images/Amazon_frontlines_jpg"/>
+    <h1>Amazon Frontlines</h1>
 </div>
 
 <div class="mission_ocean_charities">

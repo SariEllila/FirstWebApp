@@ -8,16 +8,15 @@ function OrderSheet({totalPrice}) {
     return (
 <div>
 
-    <h1>Yout total purchase = {totalPrice}</h1>
+<h1>Your total = {totalPrice}</h1>
     {/* if (user)
     bring in user billing info */}
-    else {
-        // fill in billing info\
-    }
+    {/* else { */}
+        {/* // fill in billing info\ */}
+    {/* }  */}
 
 </div>
     )
-
 }
 
 export default OrderSheet;
