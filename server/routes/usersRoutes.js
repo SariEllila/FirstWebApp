@@ -2,10 +2,6 @@ const express     = require('express'),
     router        = express.Router(),
     controller    = require('../controllers/user');
 
-    const jwt = require("jsonwebtoken");
-const validator = require("validator");
-const jwt_secret = process.env.JWT_SECRET;
-
 
 router.get('/', controller.findAll);
 

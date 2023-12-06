@@ -7,9 +7,6 @@ app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 require('dotenv').config()
-const jwt = require("jsonwebtoken");
-const validator = require("validator");
-const jwt_secret = process.env.JWT_SECRET;
 
 async function connecting(){
 try {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function SingleProduct({addToPrice, addToCart, removeFromCart, products}) {
+function SingleProduct({addToCart, removeFromCart, products}) {
 
   const { productId } = useParams();
   const [product, setProduct] = useState(products[products.findIndex(prod=>prod._id == productId)]);

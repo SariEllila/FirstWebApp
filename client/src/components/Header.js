@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
+const Header = ({quantity}) => {
     return (
 
 <nav class="navbar">
@@ -18,8 +18,8 @@ const Header = () => {
     <Link to="/store"><button class="nav_item_store">Online Store</button></Link>
 
     <div class="cart_counter">
-    <Link to="/cart"><img class="cart_icon" src="./logos/cart.png"/></Link>
-    <h2>0</h2>
+    <Link to="/cart"><img class="cart_icon" src="/logos/cart.png"/></Link>
+    <h2>{quantity}</h2>
     </div>
 
     </div>

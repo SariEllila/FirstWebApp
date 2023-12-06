@@ -3,27 +3,40 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-function Cart({cartItems, removeFromCart, totalPrice, addToPrice, addToQuantity, totalQuantity}){
+function Cart({cartItems, setCartItems, removeFromCart}){
 
-const addExtraItem = () => {
-    addToPrice();
+const total = cartItems.reduce((acc,curr)=>{
+    return acc + (curr.quantity * curr.price)
+}, 0)
+
+const handleQuantity = (item, idx, op) => {
+const copy = [...cartItems]
+    if(op === "-") {
+        if(item.quantity === 1){
+            removeFromCart(item._id)
+        } else {
+copy[idx].quantity --
+setCartItems(copy)}
+    } else if (op === "+") {
+copy[idx].quantity ++ 
+setCartItems(copy)
+    }
+
 }
-
 
     return(
 <div>
 <h1>Products in cart</h1>
-<h2>total={totalPrice}{totalQuantity}</h2>
+<h2>total={total}</h2>
     <ul>
-        {cartItems.map((item) => (
+        {cartItems.map((item,idx) => (
         <li key={item._id}>
             <span>{item.name}{item.price}€</span>
             <button onClick={() => 
-                removeFromCart(item._id)
+                handleQuantity(item, idx, "-")
                 }>-</button>
-            <button onClick={() => 
-                addToQuantity(item._id)
-                }>+</button>
+                <span>{item.quantity}</span>
+                <button onClick={()=>handleQuantity(item, idx, "+")}>+</button>
         </li>    
         ))}
     </ul>
