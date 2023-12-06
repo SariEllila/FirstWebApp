@@ -14,11 +14,11 @@
 
 nav {
   background-color: #A6C48A;
+  width: 100%;
 }
 
 .homelogo {
-  margin-right: 62%;
-  font-size: 150%;
+  font-size: 100%;
   text-shadow: 0vw 0vw 9vw rgb(19, 15, 15);
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -26,7 +26,6 @@ nav {
 
 .navbar {
   display: flex;
-  justify-content: end;
   align-items: center;
   padding: 2% 3%;
 }
@@ -37,18 +36,16 @@ a {
 }
 
 .nav_items {
-  display: inline-flex;
-  justify-content: end;
+  display: flex;
   align-items: center;
-  gap: 20%;
   font-size: 80%;
 }
 
 
 .nav_item_mission {
-  padding: 15% 25%;
+  padding: 10% 25%;
   color: rgb(248, 113, 113);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 110%;
 }
 
@@ -56,14 +53,14 @@ a {
 .nav_item_store {
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 9% 12%;
+  padding: 9% 0%;
   color: rgb(248, 113, 113);
   font-size: 110%;
   font-weight: 500;
 }
 
 .nav_item_account {
-  padding: 9% 12% !important;;
+  padding: 9% 0%;
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -76,6 +73,11 @@ a {
 
 .cart_icon {
   width: 3vw;
+}
+
+.cart_counter {
+  display: flex;
+  align-items: center;;
 }
 
 /* HEADER CLOSE */
@@ -128,26 +130,27 @@ a {
 /* MISSION */
 
 .mission_title {
-  font-family: 'Abel';
-  padding: 2% 0;
+  font-family: 'Jost';
+  padding: 0.5% 0%;
 }
 
 .mission_intro {
-  background: rgb(252, 240, 217);
+  background: rgb(254, 209, 125);
   padding: 3% 20%;
   color: rgb(62, 62, 62);
-  padding: 3% 26%;
+  padding: 2.5% 20%;
 }
+
 
 .mission_amazon_charities {
+  display:flex;
+  flex-direction: row;
+  justify-content: end;
+  font-family: 'Abel';
   padding: 10% 0;
   font-size: 130%;
-}
-
-.mission_ocean_charities {
-  background: #c4c1c1;
-  padding: 10% 0;
-  font-size: 130%;
+  height: 37vw;
+  padding: 0 0;
 }
 
 .mission_wildlife_charities {
@@ -157,10 +160,46 @@ a {
   height: 38vw;
 }
 
+.mission_ocean_charities {
+  display: flex;
+  justify-content: end;
+  height: 38vw;
+  font-size: 130%;
+}
+
+.amazon_charity_text {
+  font-size: 120%;
+  padding: 4% 4%;
+  margin-right: 2%;
+}
+
 .wildlife_charity_text {
   font-size: 120%;
   padding: 4% 4%;
   font-family: 'Abel';
+}
+
+.ocean_charity_text {
+  font-size: 120%;
+  font-family: 'Abel';
+  padding: 4% 4%;
+}
+
+.amazon_mission_title {
+  font-size: 120%;
+  font-family: 'Jost';
+  padding-bottom: 5%;
+  text-decoration: underline;
+  color: #A6C48A;
+  font-weight: 700;
+}
+
+.ocean_mission_title {
+  font-family: 'Jost';
+  font-size: 120%;
+  padding-bottom: 5%;
+  color: rgb(19, 112, 119);
+  text-decoration:underline;
 }
 
 .wildlife_mission_title {
@@ -172,22 +211,6 @@ a {
 }
 
 
-
-.mission_amazon_charities {
-  display:flex;
-  flex-direction: row;
-  justify-content: end;
-  border: 5px solid rgb(208, 207, 207);
-  font-family: 'Abel';
-  height: 40vw;
-  padding: 0 0;
-}
-
-.amazon_charity_text {
-  font-size: 120%;
-  padding: 4% 4%;
-  margin-right: 2%;
-}
 
 .amazon_webpage_link {
   padding: 2% 4%;
@@ -206,15 +229,14 @@ a {
   color: rgb(254, 229, 229);
 }
 
-.amazon_mission_title {
-  font-size: 120%;
+.ocean_webpage_link {
+  padding: 2% 4%;
+  font-size: 80%;
+  margin-top: 7%;
   font-family: 'Jost';
-  padding-bottom: 5%;
-  text-decoration: underline;
-  color: #A6C48A;
-  font-weight: 700;
+  background-color: rgb(19, 112, 119);
+  color: rgb(254, 229, 229);
 }
-
 
 
 
