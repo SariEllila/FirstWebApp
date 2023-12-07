@@ -21,7 +21,6 @@ setCartItems(copy)}
 copy[idx].quantity ++ 
 setCartItems(copy)
     }
-
 }
 
     return(

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Users from '../../components/Users';
+import Users from '../components/Users';
 
 
 const EditUserInfo = () => {

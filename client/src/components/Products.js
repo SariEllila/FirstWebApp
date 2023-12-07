@@ -18,7 +18,8 @@ const fetchProducts = async () => {
     try {
         let res = await axios.get('http://localhost:4040/products')
 if(res.status === 200) {  // You check whatever is suitable for you - you structure responses in the backend ;) 
-setProducts(res.data)
+  setProducts(res.data)
+setDisplay(res.data)
 
   // check the res structure to be sure you set an array of products to state
 }
@@ -28,19 +29,48 @@ setProducts(res.data)
 
 }
 
+useEffect(()=>{
+  fetchProducts()
+  },[])
+
+
+
 const handleFilter = () => {
-  // if every property of filters is equal to "all"
-  if(filters.id.value === "all"){
-    setDisplay(products)
+
+const valuesAll = Object.values(filters).every(value => value === 'all');
+
+  if (valuesAll) {
+    setDisplay(products);
+  } else {
+
+const filteredKeys = Object.keys(filters)
+// ["collection","price","category"]
+
+let filteredDisplay = []
+
+products.forEach(product=>{
+let checkIfShouldBeDisplayed = filteredKeys.every(filter=>{ 
+  if(filters[filter] === "all") return true
+  if(filter === "price"){
+      let range = filters[filter].split("_")
+  if(product.price > range[0] && product.price < range[1]) return true
+    }
+    return product[filter]===filters[filter] })
+
+ if(checkIfShouldBeDisplayed) {
+  filteredDisplay.push(product)
+ }
+
+})
+  
+    console.log(filteredDisplay);
+     setDisplay(filteredDisplay)
   }
 }
 
-
 useEffect(()=>{
-fetchProducts()
-},[])
 
-useEffect(()=>{
+ handleFilter()
 // handle filter
   // filter products state based on what we have in filters object
   },[filters])
@@ -78,7 +108,7 @@ return (
   <option value="all">Choose Price</option>
   <option value="10_20">10€-30€</option>
   <option value="30_50">30€-50€</option>
-  <option value="50_up">50€-</option>
+  <option value="50_999999999">50€-</option>
 </select>
 
 <button>Clear</button>
