@@ -10,6 +10,8 @@ const [filters,setFilters] = useState({
   category:"all",
   price:"all"
 })
+const [display, setDisplay] = useState(products)
+
 
 
 const fetchProducts = async () => {
@@ -26,35 +28,31 @@ setProducts(res.data)
 
 }
 
+const handleFilter = () => {
+  // if every property of filters is equal to "all"
+  if(filters.id.value === "all"){
+    setDisplay(products)
+  }
+}
+
+
 useEffect(()=>{
 fetchProducts()
 },[])
 
 useEffect(()=>{
-
-if (filters.target.value === "all"){
-
-  const filteredProducts = useProducts(products);
-
-}else {
-  const filteredProducts = useProducts(filteredProducts)
-}
+// handle filter
   // filter products state based on what we have in filters object
   },[filters])
 
 
 const handleChange = (e) => {
-
-  setFilters(
-    collection: e.target.value,
-    category: e.target.value,
-    price: e.target.value
-  )
-
+let copy = {...filters}
+copy[e.target.id] = e.target.value
+setFilters(copy)
 }
 // set/update filters state to what we have choosen in the dropdown and to update the state in the useEffect above
 // setFilters()
-}
 
 
 return (
@@ -88,8 +86,8 @@ return (
     </div>
 
     <div>
-      {products && products.length > 0 ? (
-        products.map((prod) => (
+      {display && display.length > 0 ? (
+        display.map((prod) => (
           <div key={prod.id}>
             <h3>{prod.name}</h3>
             <Link to={`/product/${prod._id}`}>
