@@ -25,20 +25,23 @@ if(!product){
   }
 
   return (
-    <div>
-      <h3>{product.name}</h3>
-      <img src={product.image} alt={`Product: ${product.name}`} />
-      <h3>{product.size}</h3>
-      <h3>{product.price}€</h3>
-      <h3>{product.description}</h3>
-      <h3>{product.material}</h3>
+    <div class="singleProductInfo">
+      <h3 class="singleProductTitle">{product.name}</h3>
+      <img class="singleProductImg" src={product.image} alt={`Product: ${product.name}`}/>
 
-      <button onClick={() => {
+      <div class="singleProductDetails">
+      <h3 class="singleProductDetail">Price: {product.price}€</h3>
+      <h3 class="singleProductDetail">Description: {product.description}</h3>
+      <h3 class="singleProductDetail">Material: {product.material}</h3>
+      </div>
+
+      <button class="cartButtons1" onClick={() => {
         addToCart(product);
       }}>Add to Cart</button>
-      <button onClick={()=>{
+      <button class="cartButtons2" onClick={()=>{
         removeFromCart(product._id);
         }}>Remove from Cart</button>
+
     </div>
   );
 }

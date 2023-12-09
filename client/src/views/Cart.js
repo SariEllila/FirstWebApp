@@ -31,6 +31,7 @@ setCartItems(copy)
         {cartItems.map((item,idx) => (
         <li key={item._id}>
             <span>{item.name}{item.price}€</span>
+            <img src={item.image}/>
             <button onClick={() => 
                 handleQuantity(item, idx, "-")
                 }>-</button>

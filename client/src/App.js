@@ -2,16 +2,19 @@ import './App.css';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import { useHistory } from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import Home from "./views/Home";
 import Mission from "./views/Mission";
 import Cart from "./views/Cart";
 import SingleProduct from './views/SingleProduct';
 import OrderSheet from './views/OrderSheet';
 import Products from './components/Products';
-import Header from './components/Header';
-import Footer from './components/Footer';
-// import * as jose from "jose";
+
+// import PaymentSuccess from "./containers/payment_success";
+// import PaymentError from "./containers/payment_error";
 
 function App() {
 
@@ -21,9 +24,6 @@ function App() {
   const quantity = cartItems.reduce((acc,curr) => {
     return acc + curr.quantity
   }, 0)
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
-  const [token, setToken] = useState(JSON.parse(localStorage.getItem("token")));
 
 
   const addToCart = (product) => {
@@ -73,6 +73,7 @@ console.log(cartItems);
 
 
   return (
+
     <div className="App">
 
       <Router>
@@ -81,13 +82,11 @@ console.log(cartItems);
           <Route path="/" element={<Home />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/store" element={<Products products={products} setProducts={setProducts} /> } />
-          {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} setCartItems={setCartItems}/>} />
-          {/* <Route path="/edituser" element={<EditUser />} /> */}
-          {/* <Route path="/login" element={<LogIn />} /> */}
           <Route path="/product/:productId" element={<SingleProduct products={products} addToCart={addToCart} removeFromCart={removeFromCart} />} />
-          {/* <Route path="/user" element={<UserInfo />} /> */}
-          <Route path="/order" element={<OrderSheet />} />
+          {/* <Route path="/order" element={<OrderSheet />} /> */}
+          {/* <Route path="/payment/success" element={<PaymentSuccess />}/>
+          <Route path="/payment/error" element={<PaymentError />}/> */}
         </Routes>
         <Footer/>
       </Router>

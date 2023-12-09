@@ -88,9 +88,11 @@ setFilters(copy)
 return (
   <div>
 
-    <div>
+<div class="store_header">
 
-<label for="filter">Filter▽</label>
+<div class="filterItems">
+
+<label for="filter">Filter ▽</label>
 
 <select id="collection" onChange={handleChange}>
   <option value="all">Choose Collection</option>
@@ -110,25 +112,36 @@ return (
   <option value="30_50">30€-50€</option>
   <option value="50_999999999">50€-</option>
 </select>
+</div>
 
-<button>Clear</button>
+{/* <button>Clear</button> */}
 
     </div>
 
     <div>
       {display && display.length > 0 ? (
         display.map((prod) => (
-          <div key={prod.id}>
-            <h3>{prod.name}</h3>
+          <div class="product_wrapper" key={prod.id}>
+            
+            <div class="productInfo">
+
+            <div class="productNames"><h3>{prod.name}</h3></div>
+            <div>
             <Link to={`/product/${prod._id}`}>
-              <img
+              <img class="productImages"
                 src={prod.image}
-                alt="a black t-shirt with green sleeves and an image of the amazon with text: SOS Amazon"
+                alt={prod.description}
               />
             </Link>
-            <h3>{prod.size}</h3>
-            <h3>{prod.price}€</h3>
-            <h3>'{prod.description}'</h3>
+            </div>
+          
+
+            <div class="productDetail"><h3>{prod.size}</h3></div>
+            <div class="productDetail"><h3>{prod.price}€</h3></div>
+            <div class="productDetail"><h3>'{prod.description}'</h3></div>
+
+            </div>
+
           </div>
         ))
       ) : (

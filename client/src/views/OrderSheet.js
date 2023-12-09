@@ -9,11 +9,8 @@ function OrderSheet({totalPrice}) {
 <div>
 
 <h1>Your total = {totalPrice}</h1>
-    {/* if (user)
-    bring in user billing info */}
-    {/* else { */}
-        {/* // fill in billing info\ */}
-    {/* }  */}
+
+
 
 </div>
     )

@@ -20,7 +20,7 @@ try {
 
 app.use('/products', require('./routes/productsRoutes'));
 app.use('/users', require('./routes/usersRoutes'));
-app.use('/payment', require('./routes/paymentsRoutes.js'));
+// app.use('/payment', require('./routes/paymentsRoutes.js'));
 
 
 connecting().then(()=>{
