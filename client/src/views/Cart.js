@@ -23,27 +23,46 @@ setCartItems(copy)
     }
 }
 
-    return(
-<div>
-<h1>Products in cart</h1>
-<h2>total={total}</h2>
-    <ul>
-        {cartItems.map((item,idx) => (
-        <li key={item._id}>
-            <span>{item.name}{item.price}€</span>
-            <img src={item.image}/>
-            <button onClick={() => 
-                handleQuantity(item, idx, "-")
-                }>-</button>
-                <span>{item.quantity}</span>
-                <button onClick={()=>handleQuantity(item, idx, "+")}>+</button>
-        </li>    
-        ))}
-    </ul>
-    <Link to="/order"><button>Move to Order</button></Link>
-</div>
+return (
+    <div>
+      <h1 class="cart_title">Check your cart</h1>
+  
+      <div class="cart_wrapper">
+        <div class="cart_items_left">
+          {cartItems.map((item, idx) => (
+            <div class="cart_item" key={item._id}>
+              <div class="item_content">
+                <div class="image_wrapper">
+                  <img src={item.image} alt={item.name} />
+                </div>
+                <div class="info_wrapper">
+                  <h3>{item.name}</h3>
+                  <p>{item.price}€</p>
+                  <div class="quantity_buttons">
+                    <button onClick={() => handleQuantity(item, idx, '-')}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => handleQuantity(item, idx, '+')}>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+  
+        <div class="cart_right_panel">
+          <div class="cart_counter">
+            <div class="right_content">
+              <h2 class="cart_total_text">Total amount: <span class="total_amount">{total} €</span></h2>
+              <Link to="/order">
+                <button class="order_button">Move to Order</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
-)
 } 
 
 export default Cart;
