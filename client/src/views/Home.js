@@ -12,10 +12,8 @@ const Home = () => {
 <h2 class="font2">See Our Products Below</h2>
 </div>
 
-<div class="homeCollectionImg">
-    <Link to="/amazon"><img class="homeImgs" src="./images/Amazon.jpg" alt="a drone image of amazon rainforest and the Amazon river running in the middle on a cloudy day"/></Link>
-    <Link to="/ocean"><img class="homeImgs" src="./images/Ocean.jpg" alt="a birdseye view of turquoise blue ocean and a large wave crashing in the middle"/></Link>
-    <Link to="/wildlife"><img class="homeImgs" src="./images/Wildlife.jpeg" alt="an birdseye view of a turquoise sea and an empty beach with rainforest"/></Link>
+<div class="homeCollectionBg">
+    <Link to="/store"><img class="homeCollectionImg" src="./images/Collection.png" alt="a collage of nature images and some online-store products"/></Link>
 </div>
 
 </main>

@@ -42,12 +42,30 @@ a {
 
 .button_mission {
   font-size: 100%;
-  padding: 3% 25%;
+  border-radius: 10%;
+  border: #A6C48A solid 1px;
+  font-family: 'Jost';
+  font-weight: 700;
+  color: rgb(74, 72, 72);
+  background-color: rgb(251, 243, 243);
 }
 
 .button_store {
-  font-size: 110%;
-  padding: 3% 25%;
+  font-size: 100%;
+  border-radius: 10%;
+  border: #A6C48A solid 1px;
+  font-family: 'Jost';
+  font-weight: 700;
+  color: rgb(74, 72, 72);
+  background-color: rgb(251, 243, 243);
+}
+
+.button_mission:hover {
+  background-color: rgb(251, 228, 170);
+}
+
+.button_store:hover {
+  background-color: rgb(251, 228, 170);
 }
 
 .nav_item_store {
@@ -96,22 +114,19 @@ display: flex;
   margin-left: 60%;
 }
 
-.homeImgs {
-  width: 30%;
-  height: 40%;
-  padding: 0.5% 1%;
-  opacity: 70%;
-}
-
 .homeCollectionImg {
-  background-color: rgb(251, 243, 243);
-  padding: 5% 0;
+  width: 70%; /* Using percentage for responsiveness */
+  padding: 3% 0 5% 0;
+  overflow: hidden;
+  transition: transform .5s ease;
 }
 
-.homeImgs:hover {
-  opacity: 50%;
-  width: 30.2%;
-  height: 40.2%;
+.homeCollectionBg {
+  overflow: hidden;
+}
+
+.homeCollectionBg:hover .homeCollectionImg {
+  transform: scale(1.1);
 }
 
 .font2 {
@@ -126,14 +141,21 @@ display: flex;
 
 .mission_title {
   font-family: 'Jost';
-  padding: 0.5% 0%;
+  padding: 1% 0%;
+  font-size: 250%;
 }
 
 .mission_intro {
-  background: rgb(254, 209, 125);
-  padding: 3% 20%;
+  padding: 3% 5%;
   color: rgb(62, 62, 62);
-  padding: 2.5% 20%;
+  background-color: rgb(250, 238, 199);
+  margin: 3% 15%;
+  box-shadow: 0 0 50px rgb(228, 228, 228);
+}
+
+.mission_intro_text {
+  font-family: 'Abel';
+  font-size: 100%;
 }
 
 
@@ -143,13 +165,13 @@ display: flex;
   justify-content: end;
   font-family: 'Abel';
   padding: 10% 0;
-  font-size: 130%;
+  font-size: 100%;
   height: 37vw;
   padding: 0 0;
 }
 
 .mission_wildlife_charities {
-  font-size: 130%;
+  font-size: 100%;
   display: flex;
   justify-content: end;
   height: 38vw;
@@ -159,25 +181,26 @@ display: flex;
   display: flex;
   justify-content: end;
   height: 38vw;
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .amazon_charity_text {
-  font-size: 120%;
+  font-size: 100%;
   padding: 4% 4%;
   margin-right: 2%;
 }
 
 .wildlife_charity_text {
-  font-size: 120%;
+  font-size: 100%;
   padding: 4% 4%;
   font-family: 'Abel';
 }
 
 .ocean_charity_text {
-  font-size: 120%;
+  font-size: 100%;
   font-family: 'Abel';
-  padding: 4% 4%;
+  padding: 4% 2%;
+  margin-right: 2%;
 }
 
 .amazon_mission_title {
@@ -215,6 +238,10 @@ display: flex;
   background-color: #A6C48A;
 }
 
+.amazon_webpage_link:hover {
+  background-color: rgb(205, 252, 190);
+}
+
 .wildlife_webpage_link {
   padding: 2% 4%;
   font-size: 80%;
@@ -222,6 +249,10 @@ display: flex;
   font-family: 'Jost';
   background-color: rgb(66, 127, 46);
   color: rgb(254, 229, 229);
+}
+
+.wildlife_webpage_link:hover {
+  background-color: rgb(26, 54, 14);
 }
 
 .ocean_webpage_link {
@@ -233,6 +264,9 @@ display: flex;
   color: rgb(254, 229, 229);
 }
 
+.ocean_webpage_link:hover {
+  background-color: rgb(6, 18, 47);
+}
 
 
 /* MISSION CLOSE */
@@ -272,30 +306,44 @@ display: flex;
   font-family: 'Jost';
 }
 
-
-.product_wrapper {
-  font-family: 'Jost'
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: 10%;
+  margin: 2% 2%;
+  max-height: calc(100vh - (2vw + 3vw + 1vw)) ;
+  overflow-y: auto; /* Add a vertical scrollbar when needed */
 }
 
-.productImages {
-  height: 40vw;
-  width: 30vw;
-  box-shadow: 0 0 3px grey;
+.product_mainwrap {
+  border: 0.5px solid rgb(252, 165, 181);
+  border-radius: 3%;
+  box-shadow: 0 0 15px rgb(255, 238, 241);
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
 }
 
 .productInfo {
-  border: 1px solid pink;
-  border-radius: 5%;
-  padding: 3% 2%;
-  margin: 2% 30%;
-  box-shadow: 0 0 10px rgb(249, 227, 230);
-  color: rgb(74, 73, 73);
+  display: flex;
+  flex-direction: column;
+  font-size: 80%;
+}
+
+.productImages {
+  max-width: 100%;
+  height: 20vw;
+  margin-bottom: 5%;
+}
+
+.productImages:hover {
+  opacity: 50%;
 }
 
 .productNames {
-  font-size: 110%;
+  font-size: 130%;
   font-weight: 400;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 

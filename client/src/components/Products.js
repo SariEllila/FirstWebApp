@@ -118,46 +118,34 @@ return (
 
     </div>
 
-    <div>
-      {display && display.length > 0 ? (
-        display.map((prod) => (
-          <div class="product_wrapper" key={prod.id}>
-            
-            <div class="productInfo">
-
-            <div class="productNames"><h3>{prod.name}</h3></div>
+    <div className="grid-container">
+  {display && display.length > 0 ? (
+    display.map((prod) => (
+      <div className="product_mainwrap" key={prod.id}>
+        <div className="product_wrapper">
+          <div className="productInfo">
+            <div className="productNames"><h3>{prod.name}</h3></div>
             <div>
-            <Link to={`/product/${prod._id}`}>
-              <img class="productImages"
-                src={prod.image}
-                alt={prod.description}
-              />
-            </Link>
+              <Link to={`/product/${prod._id}`}>
+                <img className="productImages"
+                  src={prod.image}
+                  alt={prod.description}
+                />
+              </Link>
             </div>
-          
-
-            <div class="productDetail"><h3>{prod.size}</h3></div>
-            <div class="productDetail"><h3>{prod.price}€</h3></div>
-            <div class="productDetail"><h3>'{prod.description}'</h3></div>
-
-            </div>
-
+            <div className="productDetail"><h3>{prod.size}</h3></div>
+            <div className="productDetail"><h3>{prod.price}€</h3></div>
+            <div className="productDetail"><h3>'{prod.description}'</h3></div>
           </div>
-        ))
-      ) : (
-        <h3>no products</h3>
-      )
-      }
-
-
-    </div>
+        </div>
+      </div>
+    ))
+  ) : (
+    <h3>no products</h3>
+  )}
+</div>
   </div>
 );
-
-
-
-
-
 
 }
 
