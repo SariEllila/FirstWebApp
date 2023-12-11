@@ -2,8 +2,51 @@ import Products from '../components/Products';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useStripe } from "@stripe/react-stripe-js";
 
-function Cart({cartItems, setCartItems, removeFromCart}){
+function Cart((props),{cartItems, setCartItems, removeFromCart}){
+
+    const navigate = useNavigate();
+    const stripe = useStripe();
+  
+    const calculate_total = () => {
+      let total = 0;
+      products.forEach((ele) => (total += ele.quantity * ele.amount));
+      return total;
+    };
+  
+    const createCheckoutSession = async () => {
+      try {
+        debugger;
+        const response = await axios.post(
+          `${URL}/payment/create-checkout-session`,
+          { products }
+        );
+        return response.data.ok
+          ?
+            (localStorage.setItem(
+              "sessionId",
+              JSON.stringify(response.data.sessionId)
+            ),
+            redirect(response.data.sessionId))
+          : navigate("/payment/error");
+      } catch (error) {
+        navigate("/payment/error");
+      }
+    };
+  
+    const redirect = (sessionId) => {
+      debugger;
+  
+      stripe
+        .redirectToCheckout({
+          sessionId: sessionId,
+        })
+        .then(function (result) {
+
+        });
+    };
 
 const total = cartItems.reduce((acc,curr)=>{
     return acc + (curr.quantity * curr.price)
@@ -26,7 +69,6 @@ setCartItems(copy)
 return (
     <div>
       <h1 class="cart_title">Check your cart</h1>
-  
       <div class="cart_wrapper">
         <div class="cart_items_left">
           {cartItems.map((item, idx) => (
@@ -53,9 +95,7 @@ return (
           <div class="cart_counter">
             <div class="right_content">
               <h2 class="cart_total_text">Total amount: <span class="total_amount">{total} €</span></h2>
-              <Link to="/order">
-                <button class="order_button">Move to Order</button>
-              </Link>
+                <button class="order_button" onClick={() => createCheckoutSession()}>Move to Order</button>
             </div>
           </div>
         </div>
