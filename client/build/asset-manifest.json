@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.56f94ff1.css",
+    "main.js": "/static/js/main.ea7cf51e.js",
+    "static/media/Wildlife-2.jpeg": "/static/media/Wildlife-2.8f6d6d989d5e5db89baf.jpeg",
+    "index.html": "/index.html",
+    "main.56f94ff1.css.map": "/static/css/main.56f94ff1.css.map",
+    "main.ea7cf51e.js.map": "/static/js/main.ea7cf51e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56f94ff1.css",
+    "static/js/main.ea7cf51e.js"
+  ]
+}

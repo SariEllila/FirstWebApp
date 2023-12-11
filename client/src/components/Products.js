@@ -78,6 +78,7 @@ copy[e.target.id] = e.target.value
 setFilters(copy)
 }
 
+
 const clearFilters = () => {
   const clearedFilters = {};
   for (const key in filters) {

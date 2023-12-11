@@ -8,7 +8,6 @@ import { URL } from '../config';
 
 function Cart({cartItems, setCartItems, removeFromCart}){
 
-  const Checkout = (props) => {
     const navigate = useNavigate();
     const stripe = useStripe();
   
@@ -109,6 +108,5 @@ return (
 
 } 
 
-}
 
 export default Cart;
