@@ -48,6 +48,7 @@ let filteredDisplay = []
 
 products.forEach(product=>{
 let checkIfShouldBeDisplayed = filteredKeys.every(filter=>{ 
+
   if(filters[filter] === "all") return true
   if(filter === "price"){
       let range = filters[filter].split("_")
@@ -97,21 +98,21 @@ return (
 
 <label for="filter">Filter ▽</label>
 
-<select id="collection" onChange={handleChange}>
+<select id="collection" onChange={handleChange} value={filters.collection}  >
   <option value="all">Choose Collection</option>
   <option value="Amazon">Amazon</option>
   <option value="Wildlife">Wildlife</option>
   <option value="Ocean">Ocean</option>
 </select>
-<select  id="category" onChange={handleChange}>
+<select  id="category" onChange={handleChange} value={filters.category} >
   <option value="all">Choose Product</option>
   <option value="clothing">Clothing</option>
   <option value="jewellery">Jewellery</option>
   <option value="accessories">Accessories</option>
 </select>
-<select  id="price" onChange={handleChange}>
+<select  id="price" onChange={handleChange} value={filters.price}  >
   <option value="all">Choose Price</option>
-  <option value="10_20">10€-30€</option>
+  <option value="10_30">10€-30€</option>
   <option value="30_50">30€-50€</option>
   <option value="50_999999999">50€-</option>
 </select>
