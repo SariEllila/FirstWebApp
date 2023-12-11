@@ -17,10 +17,20 @@ try {
 }
 }
 
+const path = require('path');
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, '../client/build')));
+
 
 app.use('/products', require('./routes/productsRoutes'));
 app.use('/payment', require('./routes/paymentsRoutes.js'));
 
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  });
+  
 
 connecting().then(()=>{
     app.listen(4040, () => console.log(`listening on port 4040`))
