@@ -82,7 +82,7 @@ console.log(cartItems);
           <Route path="/" element={<Home />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/store" element={<Products products={products} setProducts={setProducts} /> } />
-          <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} setCartItems={setCartItems}/>} />
+          <Route path="/cart" element={<Stripe cartItems={cartItems} removeFromCart={removeFromCart} setCartItems={setCartItems}/>} />
           <Route path="/product/:productId" element={<SingleProduct products={products} addToCart={addToCart} removeFromCart={removeFromCart} />} />
           <Route path="/stripe" element={<Stripe />} />
           <Route path="/payment/success" element={<PaymentSuccess />}/>

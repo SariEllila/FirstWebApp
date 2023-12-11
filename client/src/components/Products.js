@@ -17,11 +17,10 @@ const [display, setDisplay] = useState(products)
 const fetchProducts = async () => {
     try {
         let res = await axios.get('http://localhost:4040/products')
-if(res.status === 200) {  // You check whatever is suitable for you - you structure responses in the backend ;) 
+if(res.status === 200) {  
   setProducts(res.data)
 setDisplay(res.data)
 
-  // check the res structure to be sure you set an array of products to state
 }
     } catch (error) {
         console.log(error);
@@ -44,7 +43,6 @@ const valuesAll = Object.values(filters).every(value => value === 'all');
   } else {
 
 const filteredKeys = Object.keys(filters)
-// ["collection","price","category"]
 
 let filteredDisplay = []
 
@@ -71,8 +69,6 @@ let checkIfShouldBeDisplayed = filteredKeys.every(filter=>{
 useEffect(()=>{
 
  handleFilter()
-// handle filter
-  // filter products state based on what we have in filters object
   },[filters])
 
 
@@ -81,8 +77,14 @@ let copy = {...filters}
 copy[e.target.id] = e.target.value
 setFilters(copy)
 }
-// set/update filters state to what we have choosen in the dropdown and to update the state in the useEffect above
-// setFilters()
+
+const clearFilters = () => {
+  const clearedFilters = {};
+  for (const key in filters) {
+    clearedFilters[key] = 'all';
+  }
+  setFilters(clearedFilters);
+};
 
 
 return (
@@ -112,9 +114,9 @@ return (
   <option value="30_50">30€-50€</option>
   <option value="50_999999999">50€-</option>
 </select>
+<button onClick={clearFilters}>Clear</button>
 </div>
 
-{/* <button>Clear</button> */}
 
     </div>
 
@@ -133,7 +135,6 @@ return (
                 />
               </Link>
             </div>
-            <div className="productDetail"><h3>{prod.size}</h3></div>
             <div className="productDetail"><h3>{prod.price}€</h3></div>
             <div className="productDetail"><h3>'{prod.description}'</h3></div>
           </div>

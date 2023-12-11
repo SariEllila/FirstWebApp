@@ -46,7 +46,7 @@ const Mission = () => {
     <div class="ocean_charity_text">
     <h1 class="ocean_mission_title">OCEAN</h1>
     <h1>Ocean Sole</h1>
-    <h2>An organization cleaning up the beaches of Kenya by making products from flipflops left on beaches. The aim is to recycle over a million fliflops a year, over one tonne of styrofoam per month.</h2>
+    <h2>An organization cleaning up the beaches of Kenya by making products from flipflops left on beaches. The aim is to recycle over a million flipflops a year, over one tonne of styrofoam per month.</h2>
     <a href="https://oceansole.com/" target="_blank"><button class="ocean_webpage_link">Visit the Webpage</button></a>
 </div>
 </div>

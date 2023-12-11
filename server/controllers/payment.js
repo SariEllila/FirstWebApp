@@ -23,7 +23,7 @@ const create_checkout_session = async (req, res) => {
       }));
 
     session = await stripe.checkout.sessions.create({
-        payment_method_types: process.env.PAYMENT_METHODS,
+        payment_method_types: process.env.PAYMENT_METHODS.split(", "),
         line_items: line,
         mode: "payment",
         customer_creation: "always",

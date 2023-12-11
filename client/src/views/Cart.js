@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useStripe } from "@stripe/react-stripe-js";
+import { URL } from '../config';
 
 function Cart({cartItems, setCartItems, removeFromCart}){
 
@@ -22,7 +23,7 @@ function Cart({cartItems, setCartItems, removeFromCart}){
         debugger;
         const response = await axios.post(
           `${URL}/payment/create-checkout-session`,
-          { cartItems }
+          { products:cartItems }
         );
         return response.data.ok
           ?

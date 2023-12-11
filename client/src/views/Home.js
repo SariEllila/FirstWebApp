@@ -9,7 +9,6 @@ const Home = () => {
 <div id="home_intro_text" >
 <h1>EARTH-FRIENDLY GIFTS TO YOURSELF, OR TO LOVED ONES</h1>
 <h2 class="font2">OUR SUPPORT AREAS: THE AMAZON, OCEAN-CLEANUP, WILD-LIFE PRESERVATION</h2>
-<h2 class="font2">See Our Products Below</h2>
 </div>
 
 <div class="homeCollectionBg">
