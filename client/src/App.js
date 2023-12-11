@@ -10,11 +10,11 @@ import Home from "./views/Home";
 import Mission from "./views/Mission";
 import Cart from "./views/Cart";
 import SingleProduct from './views/SingleProduct';
-import OrderSheet from './views/OrderSheet';
 import Products from './components/Products';
+import PaymentSuccess from './containers/PaymentSuccess';
+import PaymentError from './containers/PaymentError';
+import Stripe from './components/Stripe';
 
-// import PaymentSuccess from "./containers/payment_success";
-// import PaymentError from "./containers/payment_error";
 
 function App() {
 
@@ -84,9 +84,9 @@ console.log(cartItems);
           <Route path="/store" element={<Products products={products} setProducts={setProducts} /> } />
           <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} setCartItems={setCartItems}/>} />
           <Route path="/product/:productId" element={<SingleProduct products={products} addToCart={addToCart} removeFromCart={removeFromCart} />} />
-          {/* <Route path="/order" element={<OrderSheet />} /> */}
-          {/* <Route path="/payment/success" element={<PaymentSuccess />}/>
-          <Route path="/payment/error" element={<PaymentError />}/> */}
+          <Route path="/stripe" element={<Stripe />} />
+          <Route path="/payment/success" element={<PaymentSuccess />}/>
+          <Route path="/payment/error" element={<PaymentError />}/>
         </Routes>
         <Footer/>
       </Router>

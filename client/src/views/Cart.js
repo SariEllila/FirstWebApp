@@ -5,14 +5,15 @@ import { useParams, Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useStripe } from "@stripe/react-stripe-js";
 
-function Cart((props),{cartItems, setCartItems, removeFromCart}){
+function Cart({cartItems, setCartItems, removeFromCart}){
 
+  const Checkout = (props) => {
     const navigate = useNavigate();
     const stripe = useStripe();
   
     const calculate_total = () => {
       let total = 0;
-      products.forEach((ele) => (total += ele.quantity * ele.amount));
+      cartItems.forEach((ele) => (total += ele.quantity * ele.amount));
       return total;
     };
   
@@ -21,7 +22,7 @@ function Cart((props),{cartItems, setCartItems, removeFromCart}){
         debugger;
         const response = await axios.post(
           `${URL}/payment/create-checkout-session`,
-          { products }
+          { cartItems }
         );
         return response.data.ok
           ?
@@ -48,6 +49,7 @@ function Cart((props),{cartItems, setCartItems, removeFromCart}){
         });
     };
 
+
 const total = cartItems.reduce((acc,curr)=>{
     return acc + (curr.quantity * curr.price)
 }, 0)
@@ -69,6 +71,7 @@ setCartItems(copy)
 return (
     <div>
       <h1 class="cart_title">Check your cart</h1>
+  
       <div class="cart_wrapper">
         <div class="cart_items_left">
           {cartItems.map((item, idx) => (
@@ -95,7 +98,7 @@ return (
           <div class="cart_counter">
             <div class="right_content">
               <h2 class="cart_total_text">Total amount: <span class="total_amount">{total} €</span></h2>
-                <button class="order_button" onClick={() => createCheckoutSession()}>Move to Order</button>
+                <button class="order_button" onClick={() => createCheckoutSession()}>Move to Payment</button>
             </div>
           </div>
         </div>
@@ -104,5 +107,7 @@ return (
   );
 
 } 
+
+}
 
 export default Cart;

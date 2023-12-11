@@ -29,7 +29,7 @@ const PaymentSuccess = () => {
                 <div className="message_box_left">
                 </div>
                 <div style={{ color: "#35BFDE" }} className="message_box_right">
-                  Payment Successful
+                  Payment Successful. Thank you for your order.
                 </div>
               </div>
             </div>
