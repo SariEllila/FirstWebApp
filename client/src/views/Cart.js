@@ -81,8 +81,10 @@ return (
                 <img src={item.image} alt={item.name} />
             </div>
             <div class="info_wrapper">
+              <div class="cartItemPrice">
                 <h3>{item.name}</h3>
                 <p>{item.price}€</p>
+            </div>
             <div class="quantity_buttons">
                 <button onClick={() => handleQuantity(item, idx, '-')}>-</button>
                 <span>{item.quantity}</span>
@@ -97,7 +99,7 @@ return (
         <div class="cart_right_panel">
           <div class="cart_counter">
             <div class="right_content">
-              <h2 class="cart_total_text">Total amount: <span class="total_amount">{total} €</span></h2>
+              <h2 class="cart_total_text">Total amount:<br/> <span class="total_amount">{total} €</span></h2>
                 <button class="order_button" onClick={() => createCheckoutSession()}>Move to Payment</button>
             </div>
           </div>

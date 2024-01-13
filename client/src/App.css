@@ -17,8 +17,6 @@ nav {
   background-color: #A6C48A;
 }
 
-
-
 .homelogo {
   font-size: 170%;
   padding-left: 10%;
@@ -541,26 +539,37 @@ padding: 1% 2%;
 /* CART */
 
 .cart_title {
-  padding: 5% 0 3% 0;
+  font-size: 2vw;
+  padding: 3% 0 1% 0;
+  text-align: left;
+  margin-left: 3%;
+  color: rgb(68, 68, 68);
 }
 
 .cart_wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-bottom: 2%;
 }
 
 .cart_items_left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   margin-left: 3%;
+  margin-right: 5%;
 }
 
 .cart_item {
   width: 100%;
   display: flex;
-  margin-bottom: 2%;
   border: solid 1px pink;
+  padding: 2% 4%;
+  margin-top: 1%;
+  font-family: 'Avenir';
+}
+
+.cartItemPrice {
+  text-align: start;
 }
 
 .item_content {
@@ -575,7 +584,7 @@ padding: 1% 2%;
 }
 
 .image_wrapper img {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
@@ -590,43 +599,45 @@ padding: 1% 2%;
   align-items: center;
 }
 
-.cart_right_panel {
-  flex: 0 0 30%; 
-}
 
 .cart_counter {
   align-self: flex-end;
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 .right_content {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
 }
 
 .cart_total_text {
-  color: grey;
-  border: 0.5px pink solid;
-  padding: 3% 5%;
+  color: white;
+  border: 0.1px rgb(140, 189, 129);
+  border-radius: 10px;
+  background-color: #A6C48A;
+  padding: 2% 20%;
   font-size: 120%;
+}
+
+.total_amount {
+  font-family: 'Avenir';
+  text-align: left;
 }
 
 .order_button {
   font-size: 120%;
-  margin: 0 20%;
+  margin: 5% 10%;
   font-family: 'Jost';
   border: 1px pink solid;
-  border-radius: 10%;
+  border-radius: 10px;
+  padding: 1% 2%;
+  background-color: orange;
 }
 
 .order_button:hover {
   background: rgb(249, 221, 171);
 }
 
-.total_amount {
-  color: rgb(12, 56, 26);
-}
 
 /* CART CLOSES */
 
@@ -659,6 +670,15 @@ footer {
 /* FOOTER CLOSE */
 
 
+.message_container {
+  height: 20vw;
+}
+
+.message_box {
+  padding: 2% 0%;
+  margin: 18% 0;
+  font-size: 120%;
+}
 
 
 
