@@ -25,7 +25,7 @@ const Header = ({quantity}) => {
                         
         <div class="cart_container">
             <li>
-                <img class="cart_img" src="./logos/cart.png"/>
+                <Link to="/cart"><img class="cart_img" src="./logos/cart.png"/></Link>
             </li>
             <li>
                 <h2 class="counter_text">{quantity}</h2>

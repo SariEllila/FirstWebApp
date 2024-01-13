@@ -13,7 +13,6 @@ const [filters,setFilters] = useState({
 const [display, setDisplay] = useState(products)
 
 
-
 const fetchProducts = async () => {
     try {
         let res = await axios.get('http://localhost:4040/products')
@@ -116,7 +115,7 @@ return (
   <option value="30_50">30€-50€</option>
   <option value="50_999999999">50€-</option>
 </select>
-<button onClick={clearFilters}>Clear</button>
+<button onClick={clearFilters} class="clearBtn">Clear</button>
 </div>
 
 
@@ -137,7 +136,7 @@ return (
                 />
               </Link>
             </div>
-            <div className="productDetail"><h3>{prod.price}€</h3></div>
+            <div className="productDetailPrice"><h3>{prod.price}€</h3></div>
             <div className="productDetail"><h3>'{prod.description}'</h3></div>
           </div>
         </div>

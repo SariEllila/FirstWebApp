@@ -76,20 +76,20 @@ return (
         <div class="cart_items_left">
           {cartItems.map((item, idx) => (
             <div class="cart_item" key={item._id}>
-              <div class="item_content">
-                <div class="image_wrapper">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div class="info_wrapper">
-                  <h3>{item.name}</h3>
-                  <p>{item.price}€</p>
-                  <div class="quantity_buttons">
-                    <button onClick={() => handleQuantity(item, idx, '-')}>-</button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => handleQuantity(item, idx, '+')}>+</button>
-                  </div>
-                </div>
-              </div>
+            <div class="item_content">
+            <div class="image_wrapper">
+                <img src={item.image} alt={item.name} />
+            </div>
+            <div class="info_wrapper">
+                <h3>{item.name}</h3>
+                <p>{item.price}€</p>
+            <div class="quantity_buttons">
+                <button onClick={() => handleQuantity(item, idx, '-')}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => handleQuantity(item, idx, '+')}>+</button>
+            </div>
+            </div>
+            </div>
             </div>
           ))}
         </div>

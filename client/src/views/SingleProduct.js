@@ -38,9 +38,6 @@ if(!product){
       <button class="cartButtons1" onClick={() => {
         addToCart(product);
       }}>Add to Cart</button>
-      <button class="cartButtons2" onClick={()=>{
-        removeFromCart(product._id);
-        }}>Remove from Cart</button>
 
     </div>
   );
