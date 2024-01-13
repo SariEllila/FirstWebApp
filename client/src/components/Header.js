@@ -3,27 +3,35 @@ import { Link } from "react-router-dom";
 
 
 const Header = ({quantity}) => {
+   
     return (
 
 <nav class="navbar">
 
     <div class="homelogo">
-    <Link to="/"><h1>Gifts for Earth</h1></Link>
+        <Link to="/"><h1>Gifts for Earth</h1></Link>
     </div>
 
-    <div class="nav_item_mission">
-    <Link to="/mission"><button class="button_mission">Mission</button></Link>
-    </div>
+    <div></div>
 
-    <div class="nav_item_store">
-    <Link to="/store"><button class="button_store">Online Store</button></Link>
-    </div>
+    <ul class="nav_items">
+        <li class="nav_item_mission">
+            <Link to="/mission"><button class="button_mission">Mission</button></Link>
+        </li>
 
-    <div class="cart_counter">
-    <Link to="/cart"><img id="cart_icon" src="/logos/cart.png"/></Link>
-    <h2 class="counter_text">{quantity}</h2>
-    </div>
-
+        <li class="nav_item_store">
+            <Link to="/store"><button class="button_store">Online Store</button></Link>
+        </li>
+                        
+        <div class="cart_container">
+            <li>
+                <img class="cart_img" src="./logos/cart.png"/>
+            </li>
+            <li>
+                <h2 class="counter_text">{quantity}</h2>
+            </li>
+        </div>      
+    </ul>
 </nav>
 
 )}
