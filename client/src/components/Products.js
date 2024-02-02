@@ -15,7 +15,7 @@ const [display, setDisplay] = useState(products)
 
 const fetchProducts = async () => {
     try {
-        let res = await axios.get('http://localhost:4040/products')
+        let res = await axios.get('https://frightened-pear-shorts.cyclic.app/products')
 if(res.status === 200) {  
   setProducts(res.data)
 setDisplay(res.data)

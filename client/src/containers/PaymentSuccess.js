@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
             const sessionId = JSON.parse(localStorage.getItem("sessionId"));
 
             const response = await axios.get(
-                `http://localhost:4242/payment/checkout-session?sessionId=${sessionId}`
+                `https://frightened-pear-shorts.cyclic.app/payment/checkout-session?sessionId=${sessionId}`
               );
 
               localStorage.removeItem("sessionId");
