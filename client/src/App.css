@@ -373,8 +373,8 @@ ul li {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-  gap: 3%;
+  grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+  gap: 2%;
   margin: 2% 2%;
   max-height: calc(100vh - (2vw + 3vw + 1vw)) ;
   overflow-y: auto; /* Add a vertical scrollbar when needed */
@@ -392,7 +392,7 @@ ul li {
 .productInfo {
   display: flex;
   flex-direction: column;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .productImages {
@@ -550,6 +550,7 @@ padding: 1% 2%;
   display: grid;
   grid-template-columns: 60% 40%;
   margin-bottom: 2%;
+  height: 500px;
 }
 
 .cart_items_left {

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.56f94ff1.css",
-    "main.js": "/static/js/main.94e86315.js",
+    "main.css": "/static/css/main.bb9c4b2c.css",
+    "main.js": "/static/js/main.0c944996.js",
     "static/media/Wildlife-2.jpeg": "/static/media/Wildlife-2.8f6d6d989d5e5db89baf.jpeg",
     "index.html": "/index.html",
-    "main.56f94ff1.css.map": "/static/css/main.56f94ff1.css.map",
-    "main.94e86315.js.map": "/static/js/main.94e86315.js.map"
+    "main.bb9c4b2c.css.map": "/static/css/main.bb9c4b2c.css.map",
+    "main.0c944996.js.map": "/static/js/main.0c944996.js.map"
   },
   "entrypoints": [
-    "static/css/main.56f94ff1.css",
-    "static/js/main.94e86315.js"
+    "static/css/main.bb9c4b2c.css",
+    "static/js/main.0c944996.js"
   ]
 }
