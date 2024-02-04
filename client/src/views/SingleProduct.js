@@ -43,5 +43,4 @@ if(!product){
   );
 }
 
-
 export default SingleProduct;

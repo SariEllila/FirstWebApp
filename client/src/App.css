@@ -297,19 +297,19 @@ ul li {
 
 .amazon_webpage_link {
   padding: 2% 4%;
-  font-size: 80%;
+  font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
   background-color: #A6C48A;
 }
 
 .amazon_webpage_link:hover {
-  background-color: rgb(205, 252, 190);
+  background-color: rgb(171, 185, 128);
 }
 
 .wildlife_webpage_link {
   padding: 2% 4%;
-  font-size: 80%;
+  font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
   background-color: rgb(66, 127, 46);
@@ -322,7 +322,7 @@ ul li {
 
 .ocean_webpage_link {
   padding: 2% 4%;
-  font-size: 80%;
+  font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
   background-color: rgb(19, 112, 119);
@@ -330,7 +330,7 @@ ul li {
 }
 
 .ocean_webpage_link:hover {
-  background-color: rgb(6, 18, 47);
+  background-color: rgb(1, 24, 78);
 }
 
 
