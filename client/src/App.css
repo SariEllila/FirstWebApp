@@ -8,6 +8,7 @@
   text-align: start;
   font-family: 'Jost';
   text-align: center;
+  min-height: 100vh;
 }
 
 
@@ -15,6 +16,10 @@
 
 nav {
   background-color: #A6C48A;
+}
+
+.hamburger {
+  display: none;
 }
 
 .homelogo {
@@ -32,7 +37,7 @@ a {
 
 .navbar {
   display: grid;
-  grid-template-columns: 20% 40% 40%;
+  grid-template-columns: 20% 50% 30%;
   padding: 0.8% 0;
 }
 
@@ -153,8 +158,7 @@ ul li {
   height: auto;
   min-width: 35px;
   border: solid 0.1px pink;
-  border-radius: 20%;
-  
+  border-radius: 10%;
 }
 
 .counter_text {
@@ -182,7 +186,7 @@ ul li {
 }
 
 .homeCollectionImg {
-  width: 70%; /* Using percentage for responsiveness */
+  width: 70%;
   padding: 3% 0 5% 0;
   overflow: hidden;
   transition: transform .5s ease;
@@ -253,20 +257,20 @@ ul li {
 
 .amazon_charity_text {
   font-size: 100%;
-  padding: 4% 4%;
+  padding: 8% 4%;
   margin-right: 2%;
 }
 
 .wildlife_charity_text {
   font-size: 100%;
-  padding: 4% 4%;
+  padding: 8% 4%;
   font-family: 'Abel';
 }
 
 .ocean_charity_text {
   font-size: 100%;
   font-family: 'Abel';
-  padding: 4% 2%;
+  padding: 8% 2%;
   margin-right: 2%;
 }
 
@@ -300,7 +304,10 @@ ul li {
   font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
+  font-weight: bold;
   background-color: #A6C48A;
+  border-radius: 10px;
+  border: none;
 }
 
 .amazon_webpage_link:hover {
@@ -312,7 +319,10 @@ ul li {
   font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
+  font-weight: bold;
   background-color: rgb(66, 127, 46);
+  border-radius: 10px;
+  border: none;
   color: rgb(254, 229, 229);
 }
 
@@ -325,8 +335,11 @@ ul li {
   font-size: 100%;
   margin-top: 7%;
   font-family: 'Jost';
+  font-weight: bold;
   background-color: rgb(19, 112, 119);
   color: rgb(254, 229, 229);
+  border-radius: 10px;
+  border: none;
 }
 
 .ocean_webpage_link:hover {
@@ -487,30 +500,37 @@ ul li {
 /* SINGLE PRODUCT PAGE */
 
 .singleProductImg {
-  width: 25vw;
+  width: 20vw;
   margin-bottom: 2%;
 }
 
 .singleProductTitle {
-  padding: 3% 0;
   font-size: 140%;
-  font-family: 'Avenir'
-
+  font-family: 'Avenir';  
+  text-align: start;
+  margin-bottom: 3%;
 }
 
 .singleProductInfo {
-  margin: 3% 20%;
+  margin: 5% 20%;
   color: rgb(59, 59, 59);
-  font-family: 'Avenir'
+  font-family: 'Avenir';
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  min-height: 100vh;
 }
 
 .singleProductDetails {
   font-size: 80%;
+  width: 30vw;
   display: flex;
   flex-direction: column;
-  row-gap: 1vw;
-  width: 30vw;
-  align-items: start;
+  gap: 1vw;
+  margin-bottom: 10%;
+  padding: 5% 5%;
+  border: 1px pink solid;
+  border-radius: 10px;
 }
 
 .singleProductDetail {
@@ -520,7 +540,7 @@ ul li {
 }
 
 .cartButtons1 {
-margin: 2% 1%;
+margin: 4% 0;
 font-family: 'Jost';
 font-size: 100%;
 border: 2px solid #A6C48A;
@@ -534,13 +554,38 @@ padding: 1% 2%;
   background-color: #edf8e3;
 }
 
+.backToProductsText {
+  color: grey;
+  font-size: 90%;
+  text-align: end;
+}
+
+.backToProductsText:hover {
+  color: rgb(60, 60, 60);
+  font-size: 92%
+}
+
+.productDetailsMain {
+  text-align: end;
+}
+
 /* SINGLE PRODUCT PAGE CLOSE */
 
 /* CART */
 
+.cart_main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.cart_wrapper {
+  flex: 1;
+  margin-top: 3%;
+}
+
 .cart_title {
-  font-size: 2vw;
-  padding: 3% 0 1% 0;
+  font-size: 1.5vw;
+  padding: 3% 1% 1% 0;
   text-align: left;
   margin-left: 3%;
   color: rgb(68, 68, 68);
@@ -598,6 +643,7 @@ padding: 1% 2%;
 .quantity_buttons {
   display: flex;
   align-items: center;
+  gap: 20%;
 }
 
 
@@ -616,8 +662,9 @@ padding: 1% 2%;
   border: 0.1px rgb(140, 189, 129);
   border-radius: 10px;
   background-color: #A6C48A;
-  padding: 2% 20%;
-  font-size: 120%;
+  padding: 10% 50%;
+  font-size: 100%;
+  margin-bottom: 1vw;
 }
 
 .total_amount {
@@ -626,18 +673,18 @@ padding: 1% 2%;
 }
 
 .order_button {
-  font-size: 120%;
-  margin: 5% 10%;
+  font-size: 100%;
+  margin: 0% 2%;
   font-family: 'Jost';
   border: 1px pink solid;
   border-radius: 10px;
-  padding: 1% 2%;
   background-color: orange;
 }
 
 .order_button:hover {
   background: rgb(249, 221, 171);
 }
+
 
 
 /* CART CLOSES */
@@ -681,5 +728,388 @@ footer {
   font-size: 120%;
 }
 
+/* RESPONSIVE */
+
+@media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    #home_intro_text {
+      font-size: 140%;
+      font-weight: 400;
+      color:  rgb(251, 243, 243);
+      padding: 5% 20%;
+    }
+
+    .homeMain {
+      height: 90vh;
+    }
+  
+
+
+    .mission_title {
+      font-size: 180%;
+    }
+  
+    .mission_intro_text {
+      font-size: 80%;
+    }
+    
+    .mission_amazon_charities {
+      height: 42vw;
+    }
+    
+    .mission_wildlife_charities {
+      height: 42vw;
+    }
+    
+    .mission_ocean_charities {
+      height: 42vw;
+    }
+    
+    .amazon_charity_text {
+      font-size: 75%;
+      padding: 3% 4%;
+      margin-right: 2%;
+    }
+    
+    .wildlife_charity_text {
+      font-size: 75%;
+      padding: 3% 4%;
+      font-family: 'Abel';
+    }
+    
+    .ocean_charity_text {
+      font-size: 75%;
+      padding: 3% 2%;
+    }
+
+
+
+    
+    .homelogo {
+      font-size: 150%;
+      padding-left: 12%;
+    }
+    
+    .navbar {
+      grid-template-columns: 20% 35% 45%;
+    }
+    
+    .nav_items {
+      gap: 15%;
+    }
+    
+    .button_mission {
+      font-size: 0.9rem;
+    }
+    
+    .button_store {
+      font-size: 0.9rem;
+    }
+    
+    .cart_img {
+      max-width: 3vw;
+      min-width: 3.5vh;
+    }
+    
+    .counter_text {
+      font-size: 20px;
+    }
+
+
+/* for Store-Mainpage */
+    .grid-container {
+      grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
+    }
+    
+
+
+    .cart_main {
+      min-height: 88vh;
+    }
+    
+    .cart_wrapper {
+      margin-top: 5%;
+    }
+    
+    .cart_title {
+      font-size: 2.2vw;
+      padding: 5% 1% 1% 0;
+      margin-left: 5%;
+    }
+  
+    .image_wrapper img {
+      width: 100%;
+    }
+    
+    .quantity_buttons {
+      gap: 15%;
+    }
+    
+    .cart_counter {
+      margin-top: 0;
+    }
+    
+    .cart_total_text {
+      padding: 5% 20%;
+      margin-bottom: 1.2vw;
+    }
+
+}
+
+
+@media only screen and (max-device-width: 600px) {
+
+/* Nav */
+
+  .nav_items {
+    display: none;
+  }
+
+.hamburger {
+    position: flex-end;
+    display: inline-block;
+  }
+  
+  .hamburger-content {
+    display: none;
+    position: absolute;
+    right:0;
+    z-index:1;
+    margin-top: 0.7vh;
+    margin-right: 1.5vw;
+  }
+
+  .hamburger-content ul {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .hamburger-content ul li {
+    width:100%;
+    margin-top: 3%;
+  }
+
+  .hamburger:hover .hamburger-content {
+    display: block;
+  }
+  
+  .hamburger span {
+    transition: transform .5s;
+  -webkit-transition: -webkit-transform .5s;
+    display: block;
+    transform: rotate(90deg);
+    font-size: 130%;
+    color:#fcf4de;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 15vw;
+  }
+  
+  .hamburger:hover span {
+    transition: transform .5s;
+  -webkit-transition: -webkit-transform .5s;
+    display: block;
+    transform: rotate(180deg);
+  }
+  
+  .homelogo {
+    font-size: 100%;
+    margin-left: 20%;
+    padding: 3% 0;
+  }
+  
+  .cart_container {
+    gap: 0%;
+    background: #A6C48A;
+    border-radius: 20px;
+    border: 1px rgb(255, 241, 208) solid;
+  }
+  
+  .cart_img {
+    min-width: 25px;
+    margin-top: 5px;
+    margin-right: -9vw;
+  }
+  
+  .counter_text {
+    font-size: 20px;
+    color: rgb(251, 243, 223);
+    margin-left: -9vw;
+  }
+
+
+
+  .rights_reserved_text {
+    margin-bottom: 1%;
+    font-size: 85%;
+  }
+  
+  .fb_logo {
+    width: 5%;
+    margin: 1% 1%;
+  }
+  
+  .insta_logo {
+    width: 5%;
+    margin: 1% 1%;
+  }
+
+
+  
+  #home_intro_text {
+    font-size: 90%;
+    padding: 10% 20%;
+  }
+  
+  .homeCollectionImg {
+    width: 90%;
+  }
+  
+  .font2 {
+    width: 80%;
+  }
+
+  .homeMain {
+    height: 87vh;
+  }
+
+
+
+  .mission_title {
+    padding: 2% 0%;
+    font-size: 170%;
+  }
+  
+  .mission_intro {
+    padding: 7% 5%;
+    margin: 5% 5%;
+  }
+  
+  .mission_intro_text {
+    font-size: 80%;
+  }
+  
+  
+  .mission_amazon_charities {
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1% 0;
+    font-size: 120%;
+    height: 30vw;
+    padding: 0 0;
+  }
+  
+  .mission_wildlife_charities {
+    font-size: 100%;
+    display: flex;
+    justify-content: end;
+    height: 38vw;
+  }
+  
+  .mission_ocean_charities {
+    display: flex;
+    justify-content: end;
+    height: 38vw;
+    font-size: 100%;
+  }
+  
+  .amazon_charity_text {
+    font-size: 40%;
+    padding: 1% 1%;
+    margin-right: 2%;
+  }
+  
+  .wildlife_charity_text {
+    font-size: 100%;
+    padding: 8% 4%;
+    font-family: 'Abel';
+  }
+  
+  .ocean_charity_text {
+    font-size: 100%;
+    font-family: 'Abel';
+    padding: 8% 2%;
+    margin-right: 2%;
+  }
+  
+  .amazon_mission_title {
+    font-size: 120%;
+    font-family: 'Jost';
+    padding-bottom: 5%;
+    text-decoration: underline;
+    color: #A6C48A;
+    font-weight: 700;
+  }
+  
+  .ocean_mission_title {
+    font-family: 'Jost';
+    font-size: 120%;
+    padding-bottom: 5%;
+    color: rgb(19, 112, 119);
+    text-decoration:underline;
+  }
+  
+  .wildlife_mission_title {
+    font-size: 120%;
+    font-family: 'Jost';
+    padding-bottom: 5%;
+    text-decoration: underline;
+    color: rgb(66, 127, 46);
+  }
+  
+  .amazon_webpage_link {
+    padding: 2% 4%;
+    font-size: 100%;
+    margin-top: 7%;
+    font-family: 'Jost';
+    font-weight: bold;
+    background-color: #A6C48A;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .amazon_webpage_link:hover {
+    background-color: rgb(171, 185, 128);
+  }
+  
+  .wildlife_webpage_link {
+    padding: 2% 4%;
+    font-size: 100%;
+    margin-top: 7%;
+    font-family: 'Jost';
+    font-weight: bold;
+    background-color: rgb(66, 127, 46);
+    border-radius: 10px;
+    border: none;
+    color: rgb(254, 229, 229);
+  }
+  
+  .wildlife_webpage_link:hover {
+    background-color: rgb(26, 54, 14);
+  }
+  
+  .ocean_webpage_link {
+    padding: 2% 4%;
+    font-size: 100%;
+    margin-top: 7%;
+    font-family: 'Jost';
+    font-weight: bold;
+    background-color: rgb(19, 112, 119);
+    color: rgb(254, 229, 229);
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .ocean_webpage_link:hover {
+    background-color: rgb(1, 24, 78);
+  }
+
+
+
+}
 
 

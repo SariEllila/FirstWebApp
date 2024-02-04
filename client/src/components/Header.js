@@ -32,6 +32,34 @@ const Header = ({quantity}) => {
             </li>
         </div>      
     </ul>
+
+    <div class="hamburger">
+
+    <span class="hamb-span">|||</span>
+    <div class="hamburger-content">
+        <ul>
+            <li class="nav_item_mission">
+                <Link to="/mission" class="button_mission">Mission</Link>
+            </li>
+
+            <li class="nav_item_store">
+                <Link to="/store" class="button_store">Online Store</Link>
+            </li>
+
+            <li class="cart_container">
+                <Link to="/cart">
+                    <img class="cart_img" src="./logos/cart.png" alt="Cart" />
+                </Link>
+                <div>
+                    <h2 class="counter_text">{quantity}</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
 </nav>
 
 )}

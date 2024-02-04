@@ -69,8 +69,8 @@ setCartItems(copy)
 }
 
 return (
-    <div>
-      <h1 class="cart_title">Check your cart</h1>
+    <div class="cart_main">
+      <h1 class="cart_title">Check your cart:</h1>
   
       <div class="cart_wrapper">
         <div class="cart_items_left">
