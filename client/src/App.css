@@ -1108,6 +1108,179 @@ footer {
     background-color: rgb(1, 24, 78);
   }
 
+
+
+  .store_header {
+    padding: 2% 0%;
+    font-size: 110%;
+  }
+  
+  #collection {
+    font-size: 80%;
+    border: 1px solid #A6C48A;
+    margin: 2% 1.5%;
+    color: rgb(74, 73, 73);
+    font-family: 'Jost';
+  }
+  
+  #category {
+    font-size: 80%;
+    margin: 0% 1.5%;
+  }
+  
+  #price {
+    font-size: 80%;
+    margin: 0% 1.5%;
+  }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    gap: 1%;
+  }
+  
+  .product_mainwrap {
+    padding: 7%;
+  }
+  
+  .productInfo {
+    font-size: 90%;
+  }
+  
+  .productImages {
+    margin-bottom: 3%;
+  }
+  
+  .productImages:hover {
+    opacity: 50%;
+    width: 102%;
+  }
+  
+  .productDetail {
+    margin-top: 5%;
+  }
+  
+  .productDetailPrice {
+    color: rgb(75, 75, 75);
+    font-family: 'Avenir';
+    border: solid 0.1px #A6C48A;
+    border-radius: 20px;
+    padding: 2% 5%;
+    background-color: #A6C48A;
+  }
+  
+  .clearBtn {
+    font-size: 1rem;
+    margin-left: 10%;
+  }
+
+
+
+  .singleProductImg {
+    width: 42vw;
+  }
+  
+  .singleProductTitle {
+    font-size: 100%;
+  }
+  
+  .singleProductInfo {
+    margin: 7% 5%;
+  }
+  
+  .singleProductDetails {
+    font-size: 60%;
+    width: 42vw;
+    padding: 5% 3%;
+  }
+  
+  .singleProductDetail {
+    padding: 1% 2%;
+  }
+  
+  .backToProductsText {
+    margin-top: 5%;
+  }
+
+
+  
+  .cart_wrapper {
+    flex: 1;
+    margin-top: 3.5%;
+  }
+  
+  .cart_title {
+    font-size: 4vw;
+    padding: 3% 1% 1% 0;
+    margin-left: 3%;
+  }
+  
+  .cart_wrapper {
+    display: block;
+  }
+  
+  .cart_items_left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+  
+  .cart_item {
+    width: 100%;
+    display: block;
+    border: solid 1px pink;
+    padding: 2% 4%;
+    margin-top: 1%;
+    font-family: 'Avenir';
+  }
+
+  .item_content {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+  
+  .image_wrapper {
+    margin-right: 0px;
+  }
+  
+  .image_wrapper img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info_wrapper {
+    flex: 1; 
+    display: flex
+  }
+  
+  .quantity_buttons {
+    display: block;
+  }
+  
+  .cart_counter {
+    margin-top: 5%;
+  }
+  
+  .right_content {
+    display: block;
+    flex-direction: column;
+  }
+  
+  .cart_total_text {
+    padding: 1% 0%;
+    font-size: 90%;
+    margin-bottom: 1vw;
+    margin-right: 2%;
+  }
+  
+  .order_button {
+    font-size: 80%;
+    font-weight: bold;
+    margin: 0% 2%;
+  }
+
+
 }
 
 
